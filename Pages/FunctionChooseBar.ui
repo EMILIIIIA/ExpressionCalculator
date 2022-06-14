@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FunctionChooseBar</class>
+ <widget class="QWidget" name="FunctionChooseBar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>250</width>
+    <height>519</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>250</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+border:0px;
+}
+
+QScrollBar:vertical {
+    width: 4px;
+    background: rgba(0,0,0,0);
+    margin: 0px,0px,0px,0px;
+    /*留出9px给上面和下面的箭头*/
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+QScrollBar::handle:vertical {
+    width: 8px;
+    background: rgba(0,0,0,0);
+    margin: 0px,0px,0px,0px;
+
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+
+QScrollBar::handle:vertical {
+    width: 8px;
+    background: rgba(0,0,0,25%);
+
+    border-radius: 4px;
+    min-height: 20;
+}
+
+QScrollBar::handle:vertical:hover {
+    width: 8px;
+
+    background: rgba(0,0,0,50);
+    border-radius: 4px;
+    min-height: 20;
+}
+
+
+QScrollBar::add-line:vertical 
+{
+    height: 9px;
+    width: 8px;
+    subcontrol-position: bottom;
+}
+
+
+QScrollBar::sub-line:vertical 
+{
+    height: 9px;
+    width: 8px;
+    subcontrol-position: top;
+}
+
+
+QScrollBar::add-line:vertical:hover 
+{
+    height: 9px;
+    width: 8px;
+
+    subcontrol-position: bottom;
+}
+
+
+QScrollBar::sub-line:vertical:hover 
+{
+    height: 9px;
+    width: 8px;
+    subcontrol-position: top;
+}
+
+
+
+QScrollBar::sub-page:vertical {
+    background: rgb(255,255,255，0);
+    border-radius: 4px;
+}
+
+QScrollBar::add-page:vertical 
+{
+    background: rgb(255,255,255，0);
+    border-radius: 4px;
+}
+
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgba(245, 245, 245,240);
+text-align:left;
+
+
+</string>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOn</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>246</width>
+        <height>760</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:transparent;border:none;</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="pushButton_10">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>  选择功能</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="normalButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,0);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(230,230, 230,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+         </property>
+         <property name="text">
+          <string>普通型</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="scienceButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,0);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(230,230, 230,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+         </property>
+         <property name="text">
+          <string>科学型</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="programmerButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,0);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(230,230, 230,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+         </property>
+         <property name="text">
+          <string>程序员</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="randomPageButton">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,0);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(230,230, 230,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+         </property>
+         <property name="text">
+          <string>随机生成</string>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,0);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(230,230, 230,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+         </property>
+         <property name="text">
+          <string>函数</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,0);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(230,230, 230,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+         </property>
+         <property name="text">
+          <string>概率与统计</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,0);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(230,230, 230,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+         </property>
+         <property name="text">
+          <string>单位换算</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,0);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(230,230, 230,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+         </property>
+         <property name="text">
+          <string>日期计算</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,0);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(230,230, 230,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+         </property>
+         <property name="text">
+          <string>关于</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_11">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,0);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(230,230, 230,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+         </property>
+         <property name="text">
+          <string>PushButton</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

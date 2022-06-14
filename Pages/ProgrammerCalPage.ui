@@ -1,0 +1,2189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ProgrammerCalPage</class>
+ <widget class="QWidget" name="ProgrammerCalPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1390</width>
+    <height>587</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QVBoxLayout" name="CalVLayout" stretch="0,0">
+     <property name="spacing">
+      <number>5</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="DisplayWidget" native="true">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>180</height>
+        </size>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgba(255, 255, 255,0);</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <layout class="QVBoxLayout" name="displayVLayout" stretch="4,0,0">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="displayHis">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>9</pointsize>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+            </property>
+            <property name="margin">
+             <number>5</number>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="MainDisplayLineEdit" name="displayCur">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>32</pointsize>
+              <stylestrategy>PreferAntialias</stylestrategy>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::ClickFocus</enum>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="displayNum" native="true"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="InputWidget" native="true">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>310</height>
+        </size>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#QWidget
+{
+background-color: rgba(255,255, 255,200);
+}
+</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0">
+        <item>
+         <layout class="QHBoxLayout" name="functionLayout" stretch="0">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetDefaultConstraint</enum>
+          </property>
+          <item>
+           <widget class="QComboBox" name="comboBox">
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+    
+    border-radius: 3px;  
+    padding: 1px 18px 1px 3px; 
+    font: normal normal 15px &quot;Microsoft YaHei&quot;;
+    background: transparent;
+}
+
+QComboBox::drop-down
+{
+	border-left-style: solid;
+background-color: rgba(255, 255, 255,100);
+}
+
+QComboBox::down-arrow 
+{
+
+}
+
+QComboBox:editable
+{	
+background-color: rgba(255, 255, 255,100);										
+}
+
+QComboBox:!editable
+{	
+background-color: rgba(255, 255, 255,100);									
+}
+
+QComboBox QAbstractItemView {
+    outline:0px;   /* 选定项的虚框 */
+    border: 0px;   /* 整个下拉窗体的边框 */
+    background-color: rgba(255,255, 255,200);   
+    selection-background-color: rgba(200,200, 200,200);   
+    padding-left:3px;/*边距（还有其他方向边距设置方式）*/
+}
+
+
+</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>算术移位</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>逻辑移位</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>旋转循环移位</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>带进位旋转循环</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="tabWidget">
+          <property name="styleSheet">
+           <string notr="true">QTabWidget:pane
+{
+	border-top:0px;
+	
+	background: transparent;
+}
+</string>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="buttonPage">
+           <attribute name="title">
+            <string> 键盘</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QGridLayout" name="gridLayout">
+              <property name="spacing">
+               <number>3</number>
+              </property>
+              <item row="3" column="3">
+               <widget class="QPushButton" name="num9">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>9</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QPushButton" name="opRsh">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,100);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,100);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,100);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>&gt;&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QPushButton" name="num5">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>5</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QPushButton" name="num8">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>8</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="4">
+               <widget class="QPushButton" name="opDiv">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,100);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,100);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,100);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>÷</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="4">
+               <widget class="QPushButton" name="opAdd">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,100);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,100);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,100);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>+</string>
+                </property>
+                <property name="default">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="4">
+               <widget class="QPushButton" name="opEqual">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(87,224, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(50, 200, 255,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(0,150, 255,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>=</string>
+                </property>
+                <property name="default">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QPushButton" name="opClear">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,100);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,100);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,100);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>C</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="3">
+               <widget class="QPushButton" name="num6">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>6</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="4">
+               <widget class="QPushButton" name="opSub">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,100);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,100);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,100);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>-</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="2">
+               <widget class="QPushButton" name="num2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>2</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="3">
+               <widget class="QPushButton" name="opDot">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>.</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="3">
+               <widget class="QPushButton" name="num3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>3</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QPushButton" name="opLsh">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,100);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,100);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,100);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>&lt;&lt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="4">
+               <widget class="QPushButton" name="bckSpace">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,100);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,100);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,100);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>&lt;-</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QPushButton" name="num4">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>4</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="opBrckL">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,100);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,100);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,100);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>(</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QPushButton" name="opBrckR">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,100);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,100);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,100);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>)</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1" colspan="2">
+               <widget class="QPushButton" name="num0">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QPushButton" name="num7">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>7</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QPushButton" name="opMod">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,100);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,100);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,100);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>%</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QPushButton" name="num1">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>1</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="4">
+               <widget class="QPushButton" name="opMulti">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>45</height>
+                 </size>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::TabFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,100);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,100);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,100);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>×</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="opA">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>A</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QPushButton" name="opB">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>B</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QPushButton" name="opC">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>C</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QPushButton" name="opD">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>D</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QPushButton" name="opE">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>E</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QPushButton" name="opF">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton
+{
+	background-color: rgba(255,255, 255,200);
+	border:15px;
+}
+QPushButton:hover
+{
+    background-color: rgba(200,200, 200,200);
+	border:15px;
+}
+QPushButton:pressed
+{
+  	background-color: rgba(137,137, 137,200);
+	border:15px;
+}</string>
+                </property>
+                <property name="text">
+                 <string>F</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="numPage">
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{
+
+background: transparent;
+	background-color: rgba(255, 255, 255,0);
+}</string>
+           </property>
+           <attribute name="title">
+            <string>数字</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="4" column="2">
+               <widget class="QWidget" name="group6" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_19">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_73">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_74">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_75">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_76">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QWidget" name="group9" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_21">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_22">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_23">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_24">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="2">
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QWidget" name="group2" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_15">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_57">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_58">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_59">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_60">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QWidget" name="group12" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_10">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_37">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_38">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_39">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_40">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QWidget" name="group8" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_5">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_17">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_18">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_19">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_20">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QWidget" name="group1" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_53">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_54">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_55">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_56">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QWidget" name="group10" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_29">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_30">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_31">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_32">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="2">
+               <widget class="QWidget" name="group4" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_17">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_65">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_66">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_67">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_68">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QWidget" name="group14" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_45">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_46">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_47">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_48">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QWidget" name="group" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_3">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_4">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QWidget" name="group11" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_9">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_33">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_34">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_35">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_36">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QWidget" name="group3" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_16">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_61">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_62">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_63">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_64">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QWidget" name="group15" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_13">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_49">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_50">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_51">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_52">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="6" column="3">
+               <widget class="QWidget" name="group5" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_18">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_69">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_70">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_71">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_72">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QWidget" name="group13" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_11">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_41">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_42">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_43">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_44">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="3">
+               <widget class="QWidget" name="group7" native="true">
+                <layout class="QHBoxLayout" name="horizontalLayout_20">
+                 <item>
+                  <widget class="QPushButton" name="pushButton_77">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_78">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_79">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushButton_80">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="3" column="3">
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="3">
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="0">
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="1">
+               <widget class="QLabel" name="label_14">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="2">
+               <widget class="QLabel" name="label_15">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="3">
+               <widget class="QLabel" name="label_16">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MainDisplayLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>PageEngine/MainDisplayLineEdit.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
