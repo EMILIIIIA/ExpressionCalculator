@@ -7,7 +7,12 @@
 [WindowsApi](./PageEngine/WindowsApi.md)\
 [MainDisplayLineEdit](./PageEngine/MainDisplayLineEdit.md)
 ### 名称空间 CalEngine
-[Rational](./CalEngine/Rational.md)
+[CalException](./CalEngine/CalException.md)\
+[Rational](./CalEngine/Rational.md)\
+[RationalMath](./CalEngine/RationalMath.md)\
+[AbstractExpressionCalculation](./CalEngine/AbstractExpressionCalculation.md)\
+[NormalExpressionCalculation](./CalEngine/NormalExpressionCalculation.md)\
+[ScienceExpressionCalculation](./CalEngine/ScienceExpressionCalculation.md)
 ### 名称空间 UI
 [MainWindow](./UI/MainWindow.md)\
 [FunctionChooseBar](./UI/FunctionChooseBar.md)\
