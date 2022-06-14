@@ -20,7 +20,7 @@
   - 前往QT官方网站[https://www.qt.io/zh-cn/](https://www.qt.io/zh-cn/)
   - 下载并且安装QT
   - 在GitHub上下载本项目源代码
-  - 在QT Creator中打开[.\cal.pro](.\cal.pro)
+  - 在QT Creator中打开[./cal.pro](./cal.pro)
   - 构建项目
 
 ## 项目结构
@@ -38,7 +38,7 @@ UI内为此计算器的所有UI界面，包括头文件、源文件与UI文件�
 - 一些代码规范性调整
 
 ## 项目文档
-- [.\Document\index.md](.\Document\index.md)
+- [.\Document\index.md](./Document/index.md)
 
 ## 贡献者
 - [EMILIIIIA](https://github.com/EMILIIIIA) 项目组长，UI编写
@@ -46,4 +46,4 @@ UI内为此计算器的所有UI界面，包括头文件、源文件与UI文件�
 - [asnijviasfjdj](https://github.com/asnijviasfjdj) 项目成员，负责高精度算法编写
 ## 开源许可证
 Copyright (c) SCUTersLoveDiana. All rights reserved.\
-Licensed under the [GPL v2.0](.\LICENSE) License.
+Licensed under the [GPL v2.0](./LICENSE) License.
